@@ -1,0 +1,73 @@
+:root {
+    --ff-h1: 'Inter';
+    --ff-p: 'Lexend Deca';
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-heading: hsla(0, 0%, 100%, 0.6);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--main-background);
+}
+main {
+    display: flex;
+    background-color: var(--card-background);
+    border-radius: 5px;
+}
+h1 {
+    color: var(--White);
+    font-family: var(--ff-h1);
+    font-weight: 700;
+}
+.purple {
+    color: var(--Soft-violet)
+}
+.left {
+    width: 600px;
+    font-size: 16px;
+    font-family: var(--ff-p);
+    color: var(--Slightly-transparent-white-p);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    padding: 70px;
+    gap: 30px;
+}
+.left p {
+    line-height: 30px;
+}
+.flex-group {
+    margin-top: 50px;
+    display: flex;
+    gap: 100px;
+}
+.right {
+    background-color: hsl(277, 85%, 29%);
+}
+img {
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .flex-group {
+        flex-direction: column;
+        text-align: center;
+    }
+}
